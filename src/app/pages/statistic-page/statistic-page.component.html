@@ -1,0 +1,62 @@
+<section class="statistic-container main-layout">
+  <h1>Statistic</h1>
+  <section class="bar-vertical-container">
+    <h2>Market Price</h2>
+    <ngx-charts-bar-vertical
+      [view]="[1000, 400]"
+      [results]="marketPrice"
+      [xAxisLabel]="'Market Price'"
+      [legendTitle]="'Market Avg Chart'"
+      [yAxisLabel]="'AVG'"
+      [legend]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxis]="true"
+      [yAxis]="true"
+      [gradient]="true"
+    >
+    </ngx-charts-bar-vertical>
+  </section>
+  <section class="pie-chart-container">
+    <h2>Confirmed Transactions</h2>
+    <ngx-charts-pie-chart
+      [view]="[1000, 400]"
+      [results]="confirmedTransactions"
+      [gradient]="gradient"
+      [legend]="showLegend"
+      [labels]="showLabels"
+      [doughnut]="isDoughnut"
+      [customColors]="colorScheme"
+      (select)="onSelect($event)"
+      (activate)="onActivate($event)"
+      (deactivate)="onDeactivate($event)"
+    >
+    </ngx-charts-pie-chart>
+  </section>
+</section>
+<!-- 
+<ngx-charts-area-chart-stacked
+  [view]="[1000, 400]"
+  [scheme]="colorScheme"
+  [legend]="legend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxis]="xAxis"
+  [yAxis]="yAxis"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [timeline]="timeline"
+  [results]="confirmedTransactions"
+>
+</ngx-charts-area-chart-stacked> -->
+<!-- <ngx-charts-pie-chart
+  [view]="[1000, 400]"
+  [scheme]="colorScheme"
+  [results]="confirmedTransactions"
+  [gradient]="gradient"
+  [legend]="showLegend"
+  [legendPosition]="legendPosition"
+  [labels]="showLabels"
+  [doughnut]="isDoughnut"
+>
+</ngx-charts-pie-chart> -->

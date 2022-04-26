@@ -1,0 +1,39 @@
+.app-header {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-wrap: nowrap;
+  // align-content: center;
+  // gap: 53px;
+
+  height: 70px;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  /* margin-bottom: 30px; */
+  justify-content: space-around;
+  align-content: space-between;
+
+  // .logo {
+  //   flex-grow: 1;
+  // }
+  .logo {
+    display: flex;
+    gap: 15px;
+    /* padding: 14px; */
+    padding-inline-end: 6rem;
+    .logo-title {
+      color: #e6e9ec;
+
+      .i-color {
+        color: #f7931a;
+      }
+    }
+  }
+  nav {
+    margin-right: 50px;
+    a:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

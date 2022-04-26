@@ -1,0 +1,33 @@
+.main-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: #661b1bfa;
+    // margin-bottom: 30px;
+    box-shadow: -20px 8px 11px 4px #00000030;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  footer {
+    height: 70px;
+    background-color: rgba(24, 24, 24, 0.68);
+    width: 100vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+}
+
+.main-layout {
+  padding-inline-end: 90px;
+  padding-inline-start: 90px;
+}

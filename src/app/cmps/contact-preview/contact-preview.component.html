@@ -1,0 +1,19 @@
+<!-- <p>contact-preview works!</p> -->
+<section class="contact-preview">
+  <section class="info">
+    <a [routerLink]="['/contact', contact._id]" class="data">
+      <p>Name: {{ contact.name }}</p>
+      <p>Phone: {{ contact.phone }}</p>
+    </a>
+  </section>
+  <section class="actions">
+    <a [routerLink]="['edit', contact._id]">Edit</a>
+    <button (click)="onRemoveContact($event, contact._id)" class="remove-btn">
+      X
+    </button>
+  </section>
+
+  <img [src]="img" alt="" />
+  <!-- <button (click)="onRemoveContact($event, contact._id)">Delete</button> -->
+</section>
+<!-- [src]="getUserImg() | async" alt="try" -->
