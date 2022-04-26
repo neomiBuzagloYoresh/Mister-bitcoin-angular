@@ -1,1 +1,7 @@
-<p>login works!</p>
+<h1>Login</h1>
+
+<form (ngSubmit)="onSaveUser()">
+  <label for="login">login</label>
+  <input [(ngModel)]="username" type="text" name="login" id="login" />
+  <button>Save</button>
+</form>

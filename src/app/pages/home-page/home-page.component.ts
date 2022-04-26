@@ -28,6 +28,7 @@ export class HomePageComponent implements OnInit {
   // userLoged: LoginUser;
 
   userLoged$: Observable<LoginUser[]>;
+
   ngOnInit(): void {
     this.bitcoin = this.bitCoinService.getRate();
     this.userSubscriber = this.userService.user$.subscribe(
@@ -40,9 +41,6 @@ export class HomePageComponent implements OnInit {
     return (this.user.coins / this.bitcoin).toLocaleString();
   }
 
-  async onSaveUser() {
-    //  await this.userService.login(this.userLoged);
-  }
   ngOnDestroy() {
     this.userSubscriber.unsubscribe();
   }

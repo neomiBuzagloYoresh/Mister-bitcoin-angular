@@ -2,15 +2,10 @@
   <!-- <pre>{{ user | json }}</pre> -->
   <p>User Name: {{ user.name }}</p>
   <p>Coins: {{ user.coins }}</p>
+  <p>Coins: {{ user.moves | json }}</p>
   <div>
     btc: ${{ btc }}
     <img src="../../../assets/icons for misterBitcoin/bitcoin.png" alt="" />
-
-    <form (ngSubmit)="onSaveUser()">
-      <label for="login">login</label>
-      <input [(ngModel)]="user" type="text" login="login" id="login" />
-      <button>Save</button>
-    </form>
   </div>
   <!-- 
   <ng-lottie

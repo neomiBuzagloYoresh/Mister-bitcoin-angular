@@ -9,6 +9,7 @@ import { StatisticPageComponent } from './pages/statistic-page/statistic-page.co
 import { EditPageComponent } from './pages/edit-page/edit-page.component';
 import { ContactResolverService } from './services/contact-resolver.service';
 import { LoginComponent } from './pages/login/login.component';
+import { TranferFundComponent } from './cmps/tranfer-fund/tranfer-fund.component';
 
 const routes: Routes = [
   {
@@ -43,16 +44,18 @@ const routes: Routes = [
     resolve: { contact: ContactResolverService },
     canActivate: [AuthGuard],
   },
-  // resolve: { contact: contactResolverService }
 
   {
     path: 'statistic',
     component: StatisticPageComponent,
-    // resolve: { contact: contactResolverService }
+  },
+  {
+    path: 'transfer',
+    component: TranferFundComponent,
+    resolve: { contact: ContactResolverService },
   },
   {
     path: '',
-
     component: HomePageComponent,
   },
 ];

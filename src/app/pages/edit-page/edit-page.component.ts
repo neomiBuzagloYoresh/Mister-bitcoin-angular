@@ -22,10 +22,11 @@ export class EditPageComponent implements OnInit {
       this.contact = contact?._id
         ? contact
         : (this.contactService.getEmptyContact() as Contact);
+      console.log(this.contact);
     });
   }
   async onSaveContact() {
-    this.router.navigateByUrl(this.contact._id);
+    this.router.navigateByUrl('contact');
     await this.contactService.saveContact({ ...this.contact });
   }
 }

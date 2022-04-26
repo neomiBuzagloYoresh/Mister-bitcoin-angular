@@ -14,7 +14,10 @@ export class ContactListComponent implements OnInit {
   @Input() contacts: Contact[];
   @Output('remove') onRemove = new EventEmitter<string>();
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.contactService.loadContacts();
+    console.log(this.contacts);
+  }
 
   deleteContact(selectedContactId) {
     this.contactService.deleteContact(selectedContactId);

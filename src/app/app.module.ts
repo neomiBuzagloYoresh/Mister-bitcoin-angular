@@ -19,6 +19,9 @@ import { AppHeaderComponent } from './cmps/app-header/app-header.component';
 
 import { EditPageComponent } from './pages/edit-page/edit-page.component';
 import { LoginComponent } from './pages/login/login.component';
+import { TranferFundComponent } from './cmps/tranfer-fund/tranfer-fund.component';
+import { MoveListComponent } from './cmps/move-list/move-list.component';
+import { MovePreviewComponent } from './cmps/move-preview/move-preview.component';
 
 // import { LottieModule } from 'ngx-lottie';
 // import player from 'lottie-web';
@@ -40,6 +43,9 @@ import { LoginComponent } from './pages/login/login.component';
 
     EditPageComponent,
      LoginComponent,
+     TranferFundComponent,
+     MoveListComponent,
+     MovePreviewComponent,
     // ChartComponent,
   ],
   imports: [

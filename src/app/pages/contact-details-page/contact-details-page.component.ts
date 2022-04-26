@@ -1,9 +1,9 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { UserService } from 'src/app/services/user.service';
 import { Contact } from 'src/app/models/contact.model';
 import { ContactService } from 'src/app/services/contact.service';
-
+import { Move } from 'src/app/models/move.model';
 @Component({
   selector: 'contact-details-page',
   templateUrl: './contact-details-page.component.html',
@@ -13,28 +13,26 @@ export class ContactDetailsPageComponent implements OnInit {
   constructor(
     private contactService: ContactService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private userService: UserService
   ) {}
   contact: Contact;
-
-  // @Input() contactId: string;
-  // contact: Contact;
-  // @Output() onSelect = new EventEmitter<string>();
+  contactMoves: Move[];
 
   async ngOnInit() {
-    // const contact = await this.contactService
-    //   .getContactById(this.contactId)
-    //   .toPromise();
-    // this.contact = contact;
-    // console.log(this.contact);
-    // this.route.data.subscribe((data) => {
-    //   console.log(data);
-
-    //   this.contact = data.contact;
-    // });
     this.route.data.subscribe((data: { contact }) => {
-      console.log(data);
       this.contact = data.contact;
+    });
+    this.setContactMove();
+  }
+
+  setContactMove() {
+    console.log(this.contact);
+
+    this.userService.getUser().subscribe((user) => {
+      this.contactMoves = user.moves.filter(
+        (move: Move) => this.contact._id === move.toId
+      );
     });
   }
 

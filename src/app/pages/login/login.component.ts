@@ -13,16 +13,27 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private authService: AuthService) {}
-
+  constructor(
+    private authService: AuthService,
+    private userService: UserService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+  user: User;
+  username: string;
   userSubscriber: Subscription;
 
   ngOnInit(): void {
-    //   this.userSubscriber = this.userService.user$.subscribe(
-    //     (user) => (this.user = user)
-    //   );
-    //   if (!this.user) this.router.navigateByUrl('login');
-    //   console.log(this.user);
-    // }
+    this.userSubscriber = this.userService.user$.subscribe(
+      (user) => (this.user = user)
+    );
+    if (!this.user) this.router.navigateByUrl('login');
+  }
+
+  onSaveUser() {
+    this.userService.login(this.username);
+  }
+  ngOnDestroy() {
+    this.userSubscriber.unsubscribe();
   }
 }

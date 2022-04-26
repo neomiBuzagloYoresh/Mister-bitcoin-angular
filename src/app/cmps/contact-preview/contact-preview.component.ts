@@ -12,9 +12,10 @@ export class ContactPreviewComponent implements OnInit {
   @Input() contact: Contact;
   // @Output() onSelect = new EventEmitter<string>();
   @Output('remove') onRemove = new EventEmitter<string>();
-  img: string;
+
   ngOnInit(): void {
-    this.img = this.contactService.userImg();
+    // this.contactService.loadContacts();
+    // console.log(this.contact);
   }
 
   onRemoveContact(ev: MouseEvent, contactId: string) {
