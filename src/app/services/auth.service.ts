@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
 import { LoginUser } from '../models/login.model';
+import { UserService } from 'src/app/services/user.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  isLoggedIn = true;
-  constructor() {}
+  constructor(private userService: UserService) {}
+  isLoggedIn = null;
 
-  checkIsLoggedIn(): Promise<boolean> {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(this.isLoggedIn);
-      }, 0);
-    });
+  checkIsLoggedIn(): boolean {
+    this.isLoggedIn = this.userService.getCurrUser();
+    return !!this.isLoggedIn.name;
   }
 
   //   login() {

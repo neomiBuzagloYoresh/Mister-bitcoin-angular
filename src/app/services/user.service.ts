@@ -20,6 +20,10 @@ export class UserService {
   getUser() {
     return this.user$;
   }
+  getCurrUser() {
+    const user = this.storageService.loadFromStorage(this.USER_KEY);
+    return user || this.user$;
+  }
 
   public login(username: string) {
     let user = this.storageService.loadFromStorage(this.USER_KEY);
@@ -29,8 +33,8 @@ export class UserService {
     }
     this._user$.next(user);
   }
+
   public transfer(amount: number, contact: Contact): void {
-    // this.user$.subscribe((user) => (updateUser = user));]
     let newMove = new Move(
       this._makeId(),
       contact._id,
@@ -38,18 +42,14 @@ export class UserService {
       Date.now(),
       amount
     );
-    let move = {
-      toId: contact._id,
-      to: contact.name,
-      at: Date.now(),
-      amount,
-    };
+
     let updateUser = { ...this._user$.value };
-    console.log('updateuser', updateUser);
 
     updateUser.coins -= amount;
     // [].unshift(newMove)
     updateUser.moves.unshift(newMove);
+    console.log('updateUser', updateUser);
+
     this._user$.next(updateUser);
     this.storageService.saveToStorage(this.USER_KEY, updateUser);
   }
@@ -64,7 +64,10 @@ export class UserService {
     };
   }
 
-  public logout() {}
+  public logout() {
+    localStorage.clear();
+    this._user$.next(null);
+  }
 
   private _makeId(length = 5) {
     var text = '';

@@ -1,7 +1,22 @@
-<h1>Login</h1>
+<section class="login-page">
+  <div class="container-login-form">
+    <h1>Login</h1>
 
-<form (ngSubmit)="onSaveUser()">
-  <label for="login">login</label>
-  <input [(ngModel)]="username" type="text" name="login" id="login" />
-  <button>Save</button>
-</form>
+    <form (ngSubmit)="onSaveUser()">
+      <label for="login">login</label>
+      <input [(ngModel)]="username" type="text" name="login" id="login" />
+      <button class="form-btn">Login</button>
+    </form>
+    <!-- <ng-lottie height="auto" [options]="options"></ng-lottie> -->
+  </div>
+  <div class="home-pic-container">
+    <div class="home-pic-animation">
+      <img
+        src="https://html.dreamitsolution.net/dreamhub/crypto/assets/images/22.png"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- width="1013"
+height="422" -->

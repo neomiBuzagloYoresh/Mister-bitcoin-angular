@@ -1,17 +1,24 @@
 <section class="home-page main-layout">
-  <!-- <pre>{{ user | json }}</pre> -->
-  <p>User Name: {{ user.name }}</p>
-  <p>Coins: {{ user.coins }}</p>
-  <p>Coins: {{ user.moves | json }}</p>
-  <div>
-    btc: ${{ btc }}
-    <img src="../../../assets/icons for misterBitcoin/bitcoin.png" alt="" />
+  <div class="login-user-details">
+    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="" />
+    <p>User Name: {{ user.name }}</p>
+    <p>Coins: {{ user.coins }}</p>
+
+    <div class="btc-container">
+      <p>
+        btc: ${{ btc }}
+        <img
+          class="bitcoin-home"
+          src="https://html.dreamitsolution.net/cryptozen/assets/images/new/2.png"
+          alt=""
+        />
+      </p>
+    </div>
   </div>
-  <!-- 
-  <ng-lottie
-    width="500px"
-    height="600px"
-    containerClass="moving-box"
-    [options]="options"
-  ></ng-lottie> -->
+
+  <div>
+    <move-list [moves]="userMoves"></move-list>
+  </div>
 </section>
+
+<!-- <ng-lottie height="auto" [options]="options"></ng-lottie> -->

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
-
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ContactDetailsPageComponent } from './pages/contact-details-page/contact-details-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -20,6 +19,7 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactPageComponent,
+
     children: [
       {
         path: 'edit/:id',
@@ -35,8 +35,10 @@ const routes: Routes = [
         path: 'contact/:id',
         component: ContactDetailsPageComponent,
         resolve: { contact: ContactResolverService },
+        canActivate: [AuthGuard],
       },
     ],
+    canActivate: [AuthGuard],
   },
   {
     path: 'contact/:id',
@@ -48,15 +50,18 @@ const routes: Routes = [
   {
     path: 'statistic',
     component: StatisticPageComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'transfer',
     component: TranferFundComponent,
     resolve: { contact: ContactResolverService },
+    canActivate: [AuthGuard],
   },
   {
     path: '',
     component: HomePageComponent,
+    canActivate: [AuthGuard],
   },
 ];
 

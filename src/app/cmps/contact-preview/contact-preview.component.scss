@@ -18,38 +18,35 @@ img {
 // }
 
 .contact-preview {
-  height: 215px;
-  width: 450px;
   box-shadow: -15px -17px 10px #00000045;
   border-radius: 3px;
   display: flex;
   overflow: hidden;
   cursor: pointer;
-  align-items: flex-end;
-  background-color: white;
-  img {
-  }
+  background-color: #ffffffe6;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  font-size: x-large;
+  border-radius: 5px;
+  position: relative;
+  transition: 0.5s;
+  line-height: 1.5;
+  z-index: 1;
+  justify-content: center;
+  height: 410px;
+  width: 310px;
 
   .info {
     // padding: 5px;
     flex-grow: 1;
+    /* display: flex; */
+    /* flex-direction: column; */
     display: flex;
-    flex-direction: column;
-    > * {
-      margin: 0;
-      padding: 10px;
-    }
-
-    .data {
-      display: flex;
-      box-shadow: 0 0 black;
-
-      justify-content: center;
-
-      flex-direction: column;
-      padding-bottom: 69px;
-      padding-right: -38px;
-      margin-right: -33px;
+    box-shadow: 0 0 black;
+    justify-content: center;
+    flex-direction: p {
+      margin: 5px;
     }
   }
   .actions {
@@ -84,4 +81,35 @@ a {
 .actions:hover {
   transform: translateX(0%);
   opacity: 1;
+}
+
+.info::before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background: #ffb900;
+  border-radius: 45px 0 0 0;
+  transition: 0.5s;
+  z-index: -1;
+  p {
+    margin: 5px;
+  }
+}
+.info:hover {
+  height: inherit;
+  width: inherit;
+  opacity: 1;
+  border-radius: inherit;
+  content: "";
+
+  background: #ffb900;
+  border-radius: 45px 0 0 0;
+  transition: 0.5s;
+  z-index: -1;
+  p {
+    margin: 5px;
+  }
 }

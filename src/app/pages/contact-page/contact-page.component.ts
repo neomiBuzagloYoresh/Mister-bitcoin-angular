@@ -22,7 +22,7 @@ export class ContactPageComponent implements OnInit {
     this.contacts$ = this.contactService.contacts$;
   }
   onRemoveContact(contactId: string) {
-    console.log('contactId pet app:', contactId);
+    // console.log('contactId pet app:', contactId);
     this.contactService.deleteContact(contactId);
     // this.userMsgService.setMsg(`Pet (${contactId}) removed!`)
   }

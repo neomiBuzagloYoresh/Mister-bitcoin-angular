@@ -1,15 +1,13 @@
 <section class="contact-details">
-  <img [src]="contact.img" alt="" />
-  <h1>{{ contact.name }}</h1>
-  <p>Phone: {{ contact.phone }}</p>
-  <p>Email: {{ contact.email }}</p>
+  <div class="details-container">
+    <img [src]="contact.img" alt="" />
+    <h1>{{ contact.name }}</h1>
+    <p>Phone: {{ contact.phone }}</p>
+    <p>Email: {{ contact.email }}</p>
+    <tranfer-fund [contact]="contact"></tranfer-fund>
+  </div>
 
-  <button (click)="onBack()">Back</button>
-  <tranfer-fund [contact]="contact"></tranfer-fund>
-
-  <hr />
-  <move-list [contactMoves]="contactMoves"></move-list>
+  <move-list [moves]="contactMoves"></move-list>
+  <button class="form-btn" (click)="onBack()">Back to contact</button>
 </section>
-
-<!-- <a [routerLink]="['transfer']">Transfer</a> -->
-<!-- src="https://robohash.org/{{ contact._id }}?set=set4"  -->
+<!-- [contact]="contact" -->

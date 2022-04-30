@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Move } from 'src/app/models/move.model';
+import { Contact } from 'src/app/models/contact.model';
 
 @Component({
   selector: 'move-preview',
@@ -9,6 +10,10 @@ import { Move } from 'src/app/models/move.model';
 export class MovePreviewComponent implements OnInit {
   constructor() {}
   @Input() move: Move;
-
-  ngOnInit(): void {}
+  @Input() contact: Contact;
+  ngOnInit(): void {
+    // if (this.contact.img === undefined) {
+    //   this.contact;
+    // }
+  }
 }

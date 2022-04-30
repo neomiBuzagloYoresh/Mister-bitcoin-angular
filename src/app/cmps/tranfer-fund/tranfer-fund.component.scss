@@ -1,0 +1,41 @@
+.transfer-container {
+  margin-top: 30px;
+  input[type="number"] {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 51px;
+    color: #000000;
+    height: 34px;
+    /* width: 23vw; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    transition: all 500ms ease;
+    font-weight: 500;
+
+    text-transform: capitalize;
+  }
+  .form-btn {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Poppins";
+    text-transform: uppercase;
+    color: #010716;
+    background: #ffba00;
+    padding: 13px 20px;
+    border-radius: 5px;
+    float: left;
+    z-index: 1;
+    position: relative;
+    margin-right: 18px;
+    border: 1px solid #ffba00;
+  }
+
+  .form-btn:hover {
+    color: #ffba00;
+    border: 1px solid #ffba00;
+    background: none;
+  }
+}

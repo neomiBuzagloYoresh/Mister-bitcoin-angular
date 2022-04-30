@@ -9,8 +9,15 @@ html {
 }
 
 body {
+  background-image: url("./assets/icons for misterBitcoin/home-page.jpg");
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  background-position: 55%;
   margin: 0;
-  background-color: #10101076;
+  max-height: 100vw;
+  max-width: 100vw;
+  // background-color: #10101076;
 }
 
 .container {
@@ -30,9 +37,9 @@ a {
   }
 }
 
-main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-}
+// main {
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   gap: 20px;
+// }

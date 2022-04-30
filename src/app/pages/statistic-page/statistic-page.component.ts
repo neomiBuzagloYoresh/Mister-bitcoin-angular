@@ -45,20 +45,20 @@ export class StatisticPageComponent implements OnInit {
     });
   }
   onSelect(confirmedTransactions): void {
-    console.log(
-      'Item clicked',
-      JSON.parse(JSON.stringify(this.confirmedTransactions))
-    );
+    // console.log(
+    //   'Item clicked',
+    //   JSON.parse(JSON.stringify(this.confirmedTransactions))
+    // );
   }
 
   onActivate(confirmedTransactions): void {
-    console.log('Activate', JSON.parse(JSON.stringify(confirmedTransactions)));
+    // console.log('Activate', JSON.parse(JSON.stringify(confirmedTransactions)));
   }
 
   onDeactivate(confirmedTransactions): void {
-    console.log(
-      'Deactivate',
-      JSON.parse(JSON.stringify(confirmedTransactions))
-    );
+    // console.log(
+    //   'Deactivate',
+    //   JSON.parse(JSON.stringify(confirmedTransactions))
+    // );
   }
 }

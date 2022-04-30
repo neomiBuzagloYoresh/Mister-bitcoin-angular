@@ -22,13 +22,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { TranferFundComponent } from './cmps/tranfer-fund/tranfer-fund.component';
 import { MoveListComponent } from './cmps/move-list/move-list.component';
 import { MovePreviewComponent } from './cmps/move-preview/move-preview.component';
+import { LottieModule } from 'ngx-lottie'; // add this line
 
-// import { LottieModule } from 'ngx-lottie';
-// import player from 'lottie-web';
-
-// export function playerFactory() {
-//   return player;
-// }
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,12 +35,11 @@ import { MovePreviewComponent } from './cmps/move-preview/move-preview.component
     ContactPreviewComponent,
     ContactFilterComponent,
     AppHeaderComponent,
-
     EditPageComponent,
-     LoginComponent,
-     TranferFundComponent,
-     MoveListComponent,
-     MovePreviewComponent,
+    LoginComponent,
+    TranferFundComponent,
+    MoveListComponent,
+    MovePreviewComponent,
     // ChartComponent,
   ],
   imports: [
@@ -55,8 +49,22 @@ import { MovePreviewComponent } from './cmps/move-preview/move-preview.component
     HttpClientModule,
     NgxChartsModule,
     BrowserAnimationsModule,
+    // LottieCacheModule,
+    LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+// import { AnimationOptions } from 'ngx-lottie';
+
+// export function playerFactory() { // add this line
+//   return import('lottie-web'); // add this line
+//   options: AnimationOptions = {
+//     path: 'add animation json file link', // download the JSON version of animation in your project directory and add the path to it like ./assets/animations/example.json
+//   };
+// }
+export function playerFactory() {
+  // add this line
+  return import('lottie-web'); // add this line
+}

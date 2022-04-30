@@ -1,7 +1,22 @@
-<section>
-  <div>
-    <p>To: {{ move.to }}</p>
-    <p>Amount: {{ move.amount }}</p>
-    <p>At: {{ move.at | date: "dd.MM.yyyy EEEE" }}</p>
+<section class="move-preview">
+  <div class="move-preview-container">
+    <!-- <img [src]="contact.img" alt="" /> -->
+
+    <span>
+      <img src="../../../assets/icons for misterBitcoin/user.png" />:
+      {{ move.to }}</span
+    >
+    <span>
+      <img src="../../../assets/icons for misterBitcoin/amount.png" />: ${{
+        move.amount
+      }}</span
+    >
+    <span>
+      <img
+        class="date-img"
+        src="../../../assets/icons for misterBitcoin/calendar.png"
+      />
+      :{{ move.at | date: "dd.MM.yyyy EEEE" }}</span
+    >
   </div>
 </section>

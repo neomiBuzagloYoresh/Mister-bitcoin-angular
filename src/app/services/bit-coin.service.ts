@@ -15,9 +15,9 @@ export class BitCoinService {
   // public contacts$ = this._contacts$.asObservable();
 
   public getRate() {
-    // return this.http.get('https://blockchain.info/tobtc?currency=USD&value=1');
+    return this.http.get('https://blockchain.info/tobtc?currency=USD&value=1');
 
-    return 0.00237;
+    // return 0.00237;
   }
 
   public getMarketPrice() {

@@ -20,15 +20,19 @@ export class ContactDetailsPageComponent implements OnInit {
   contactMoves: Move[];
 
   async ngOnInit() {
+    // this.contact;
+
+    // this.contactService.loadContacts();
+
     this.route.data.subscribe((data: { contact }) => {
+      // console.log(this.route.data);
+
       this.contact = data.contact;
     });
     this.setContactMove();
   }
 
   setContactMove() {
-    console.log(this.contact);
-
     this.userService.getUser().subscribe((user) => {
       this.contactMoves = user.moves.filter(
         (move: Move) => this.contact._id === move.toId

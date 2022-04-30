@@ -1,5 +1,13 @@
-<p>move-list works!</p>
-
 <section class="move-list">
-  <move-preview *ngFor="let move of contactMoves" [move]="move"></move-preview>
+  <div class="sub-title">
+    <h5>Transfer</h5>
+    <span></span>
+  </div>
+
+  <move-preview
+    *ngFor="let move of moves"
+    [contact]="contact"
+    [move]="move"
+  ></move-preview>
 </section>
+<!-- [contact]="contact" -->

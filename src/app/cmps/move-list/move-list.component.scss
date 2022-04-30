@@ -1,0 +1,40 @@
+.move-list {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+  .sub-title {
+    h5 {
+      font-size: 18px;
+      font-weight: 500;
+      font-family: "Poppins";
+      color: #ffba00;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+    }
+    h5::before {
+      position: absolute;
+      content: "";
+      top: 11px;
+      left: -85%;
+      height: 1px;
+      width: 75%;
+      background-image: linear-gradient(to right, #020a1f, #f6b301);
+    }
+    h5::after {
+      position: absolute;
+      content: "";
+      top: 11px;
+      right: -84%;
+      height: 1px;
+      width: 75%;
+      background-image: linear-gradient(to right, #f6b301, #020a1f);
+      transition: 0.5s;
+    }
+  }
+}

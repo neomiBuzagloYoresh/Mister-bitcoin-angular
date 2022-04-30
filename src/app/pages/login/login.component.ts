@@ -6,7 +6,7 @@ import { BitCoinService } from 'src/app/services/bit-coin.service';
 import { UserService } from 'src/app/services/user.service';
 import { LoginUser } from 'src/app/models/login.model';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { AnimationOptions } from 'ngx-lottie';
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -19,6 +19,9 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) {}
+  options: AnimationOptions = {
+    path: '../../../assets/lf20_ikaawl5v.json',
+  };
   user: User;
   username: string;
   userSubscriber: Subscription;
@@ -31,7 +34,10 @@ export class LoginComponent implements OnInit {
   }
 
   onSaveUser() {
+    if (!this.username?.length) return;
+
     this.userService.login(this.username);
+    this.router.navigateByUrl('');
   }
   ngOnDestroy() {
     this.userSubscriber.unsubscribe();

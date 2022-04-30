@@ -219,7 +219,7 @@ export class ContactService {
 
   private _addContact(contact: Contact) {
     //mock the server work
-    console.log('contact', contact);
+    // console.log('contact', contact);
 
     const newContact = new Contact(
       contact._id,

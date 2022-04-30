@@ -1,18 +1,24 @@
-.app-header {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-wrap: nowrap;
-  // align-content: center;
-  // gap: 53px;
-
-  height: 70px;
+.main-header {
+  // margin-bottom: -83px;
   display: flex;
-  width: 100vw;
+  justify-content: center;
   align-items: center;
-  /* margin-bottom: 30px; */
-  justify-content: space-around;
-  align-content: space-between;
+  align-content: center;
+  .container {
+    width: 100%;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // display: flex;
+  // // width: 100vw;
+  // align-items: center;
+  // /* margin-bottom: 30px; */
+  // justify-content: space-around;
+  // align-content: space-between;
 
   // .logo {
   //   flex-grow: 1;
@@ -25,15 +31,68 @@
     .logo-title {
       color: #e6e9ec;
 
-      .i-color {
+      .logo-i-color {
         color: #f7931a;
       }
     }
   }
   nav {
-    margin-right: 50px;
+    display: flex;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    font-family: "Poppins";
+    text-transform: capitalize;
+    padding: 34px 0 0px 25px;
+    transition: 0.5s;
+    margin-right: -21px;
+    gap: 65px;
     a:not(:last-child) {
       margin-right: 10px;
     }
+    a:hover {
+      color: #f7931a;
+      transform: scale(1);
+    }
   }
 }
+
+// .app-header {
+//   // display: flex;
+//   // justify-content: center;
+//   // align-items: center;
+//   // flex-wrap: nowrap;
+//   // align-content: center;
+//   // gap: 53px;
+
+//   // height: 70px;
+//   display: flex;
+//   // width: 100vw;
+//   align-items: center;
+//   /* margin-bottom: 30px; */
+//   justify-content: space-around;
+//   align-content: space-between;
+
+//   // .logo {
+//   //   flex-grow: 1;
+//   // }
+//   .logo {
+//     display: flex;
+//     gap: 15px;
+//     /* padding: 14px; */
+//     padding-inline-end: 6rem;
+//     .logo-title {
+//       color: #e6e9ec;
+
+//       .i-color {
+//         color: #f7931a;
+//       }
+//     }
+//   }
+//   nav {
+//     margin-right: 50px;
+//     a:not(:last-child) {
+//       margin-right: 10px;
+//     }
+//   }
+// }

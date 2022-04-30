@@ -23,7 +23,7 @@ export class TranferFundComponent implements OnInit {
   amount: number;
 
   ngOnInit(): void {
-    console.log(this.contact);
+    // console.log(this.contact);
   }
 
   onTransfer() {

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Move } from 'src/app/models/move.model';
+import { Contact } from 'src/app/models/contact.model';
 
 @Component({
   selector: 'move-list',
@@ -8,7 +9,10 @@ import { Move } from 'src/app/models/move.model';
 })
 export class MoveListComponent implements OnInit {
   constructor() {}
-  @Input() contactMoves: Move[];
+  @Input() moves: Move[];
+  @Input() contact: Contact;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // console.log(this.moves);
+  }
 }

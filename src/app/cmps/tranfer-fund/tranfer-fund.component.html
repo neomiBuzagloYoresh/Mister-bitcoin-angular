@@ -1,9 +1,7 @@
-<hr />
-
-<p>tranfer-fund works!</p>
-
-<form (ngSubmit)="onTransfer()">
-  <label for="transfer">Transfer</label>
-  <input [(ngModel)]="amount" type="number" name="transfer" id="transfer" />
-  <button>Save</button>
-</form>
+<section class="transfer-container">
+  <form (ngSubmit)="onTransfer()">
+    <label for="transfer">Transfer</label>
+    <input [(ngModel)]="amount" type="number" name="transfer" id="transfer" />
+    <button class="form-btn">Save</button>
+  </form>
+</section>
