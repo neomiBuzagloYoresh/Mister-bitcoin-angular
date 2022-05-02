@@ -16,7 +16,6 @@ export class ContactListComponent implements OnInit {
 
   ngOnInit(): void {
     this.contactService.loadContacts();
-    // console.log(this.contacts);
   }
 
   deleteContact(selectedContactId) {

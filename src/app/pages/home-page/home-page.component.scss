@@ -1,34 +1,48 @@
 .home-page {
   display: flex;
   flex-direction: row;
-  /* gap: 10px; */
-  // background: #0a2d6d;
   text-align: center;
-  position: inherit;
-  padding: 26px 0 31px;
-  border-radius: 0;
-  bottom: 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  justify-content: space-between;
+  align-content: center;
+  align-items: flex-start;
   color: white;
+  gap: 80px;
+  justify-content: space-around;
+
   .login-user-details {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     font-size: x-large;
     background: #000616;
-    padding: 40px 2px 22px;
+    padding: 61px 0px 65px;
     margin: 0 0 30px;
     border-radius: 5px;
     position: relative;
     transition: 0.5s;
     line-height: 1.5;
     z-index: 1;
+    height: 450px;
     p {
-      margin: 5px;
+      // margin: 5px;
+      margin: 0px;
+    }
+    .container-coins {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      /* margin: 0px; */
+      align-items: flex-start;
+      margin-top: 29px;
+      align-content: center;
+      span {
+        font-weight: bold;
+        color: #ffb900;
+      }
     }
   }
+
   .login-user-details::before {
     position: absolute;
     bottom: 0;
@@ -41,7 +55,7 @@
     transition: 0.5s;
     z-index: -1;
     p {
-      margin: 5px;
+      margin: 0px;
     }
   }
   .login-user-details:hover {
@@ -50,13 +64,17 @@
     opacity: 1;
     border-radius: inherit;
     content: "";
+    height: 450px;
 
     background: #ffb900;
     border-radius: 45px 0 0 0;
     transition: 0.5s;
     z-index: -1;
     p {
-      margin: 5px;
+      margin: 0px;
+      span {
+        color: #000;
+      }
     }
   }
   .btc-container {
@@ -73,8 +91,13 @@
   img {
     border-radius: 12px;
     object-fit: contain;
-    width: 100%;
+    width: 70%;
     // height: 200px;
     // color: #00000000;
   }
 }
+
+// span:hover {
+//   font-weight: bold;
+//   color: rgb(0, 0, 0);
+// }

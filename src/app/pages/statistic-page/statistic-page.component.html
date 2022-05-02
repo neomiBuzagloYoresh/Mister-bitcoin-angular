@@ -20,13 +20,13 @@
   <section class="pie-chart-container">
     <h2>Confirmed Transactions</h2>
     <ngx-charts-pie-chart
+      style="color: #ffffff"
       [view]="[1000, 400]"
       [results]="confirmedTransactions"
       [gradient]="gradient"
       [legend]="showLegend"
       [labels]="showLabels"
       [doughnut]="isDoughnut"
-      [customColors]="colorScheme"
       (select)="onSelect($event)"
       (activate)="onActivate($event)"
       (deactivate)="onDeactivate($event)"

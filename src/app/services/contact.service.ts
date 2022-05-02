@@ -169,8 +169,10 @@ export class ContactService {
     if (filterBy && filterBy.term) {
       contacts = this._filter(contacts, filterBy.term);
     }
+    this._contactsDb = contacts;
     this._contacts$.next(this._sort(contacts));
-    this.storageService.saveToStorage(this.CONTACT_KEY, contacts);
+    if (!filterBy)
+      this.storageService.saveToStorage(this.CONTACT_KEY, contacts);
   }
 
   public getContactById(id: string): Observable<Contact> {
@@ -187,6 +189,8 @@ export class ContactService {
     this._contactsDb = this._contactsDb.filter((contact) => contact._id !== id);
 
     // change the observable data in the service - let all the subscribers know
+    this.storageService.saveToStorage(this.CONTACT_KEY, this._contactsDb);
+
     this._contacts$.next(this._contactsDb);
   }
 
@@ -214,6 +218,8 @@ export class ContactService {
       contact._id === c._id ? contact : c
     );
     // change the observable data in the service - let all the subscribers know
+    this.storageService.saveToStorage(this.CONTACT_KEY, this._contactsDb);
+
     this._contacts$.next(this._sort(this._contactsDb));
   }
 
@@ -234,6 +240,8 @@ export class ContactService {
     newContact.setId(randomId);
 
     this._contactsDb.push(newContact);
+    this.storageService.saveToStorage(this.CONTACT_KEY, this._contactsDb);
+
     this._contacts$.next(this._sort(this._contactsDb));
   }
 
@@ -269,6 +277,7 @@ export class ContactService {
       );
     });
   }
+
   private _makeId(length = 5) {
     var text = '';
     var possible =

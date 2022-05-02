@@ -49,7 +49,7 @@ import { LottieModule } from 'ngx-lottie'; // add this line
     HttpClientModule,
     NgxChartsModule,
     BrowserAnimationsModule,
-    // LottieCacheModule,
+
     LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [],

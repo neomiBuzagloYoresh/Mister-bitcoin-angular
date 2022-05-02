@@ -1,18 +1,19 @@
 <section class="home-page main-layout">
   <div class="login-user-details">
     <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="" />
-    <p>User Name: {{ user.name }}</p>
-    <p>Coins: {{ user.coins }}</p>
-
-    <div class="btc-container">
-      <p>
-        btc: ${{ btc }}
-        <img
-          class="bitcoin-home"
-          src="https://html.dreamitsolution.net/cryptozen/assets/images/new/2.png"
-          alt=""
-        />
-      </p>
+    <div class="container-coins">
+      <p><span>Hello: </span> {{ user.name }}</p>
+      <p><span>Coins:</span> {{ user.coins }}</p>
+      <div class="btc-container">
+        <p>
+          <span> btc: </span> ${{ btc }}
+          <img
+            class="bitcoin-home"
+            src="https://html.dreamitsolution.net/cryptozen/assets/images/new/2.png"
+            alt=""
+          />
+        </p>
+      </div>
     </div>
   </div>
 

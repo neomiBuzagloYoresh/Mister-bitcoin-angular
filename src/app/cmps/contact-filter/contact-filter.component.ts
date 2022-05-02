@@ -19,5 +19,7 @@ export class ContactFilterComponent implements OnInit {
 
   onChangeFilter() {
     this.contactService.loadContacts(this.filterBy);
+
+    console.log(this.filterBy);
   }
 }

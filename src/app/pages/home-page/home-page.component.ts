@@ -32,9 +32,7 @@ export class HomePageComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) {}
-  // options: AnimationOptions = {
-  //   path: '../../../assets/62792-bitcoin-motion.json',
-  // };
+
   onLoopCompleteCalledTimes = 0;
   player: any;
   user: User;
@@ -65,7 +63,9 @@ export class HomePageComponent implements OnInit {
   }
   get btc() {
     // console.log(this.user.coins / this.bitcoin);
-    return (this.user.coins / this.bitcoin).toLocaleString();
+    return (this.user.coins / this.bitcoin).toLocaleString(undefined, {
+      maximumFractionDigits: 2,
+    });
   }
   options: AnimationOptions = {
     path: '../../../assets/62792-bitcoin-motion.json',

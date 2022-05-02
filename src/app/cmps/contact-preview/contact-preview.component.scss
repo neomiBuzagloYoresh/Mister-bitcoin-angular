@@ -23,19 +23,19 @@ img {
   display: flex;
   overflow: hidden;
   cursor: pointer;
-  background-color: #ffffffe6;
-  display: flex;
+  background-color: #0b3d60fc;
+  /* display: flex; */
   flex-direction: column-reverse;
   align-items: center;
-  font-size: x-large;
+  font-size: large;
   border-radius: 5px;
   position: relative;
   transition: 0.5s;
   line-height: 1.5;
   z-index: 1;
-  justify-content: center;
-  height: 410px;
-  width: 310px;
+  /* justify-content: center; */
+  height: 356px;
+  width: 260px;
 
   .info {
     // padding: 5px;
@@ -90,7 +90,8 @@ a {
   right: 0;
   height: 50px;
   width: 50px;
-  background: #ffb900;
+  // background: #ffb900;
+  background: #85430f;
   border-radius: 45px 0 0 0;
   transition: 0.5s;
   z-index: -1;
@@ -104,8 +105,8 @@ a {
   opacity: 1;
   border-radius: inherit;
   content: "";
-
-  background: #ffb900;
+  background: #85430f;
+  // background: #ffb900;
   border-radius: 45px 0 0 0;
   transition: 0.5s;
   z-index: -1;

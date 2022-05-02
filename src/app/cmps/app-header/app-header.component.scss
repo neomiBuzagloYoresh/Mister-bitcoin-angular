@@ -6,6 +6,7 @@
   align-content: center;
   .container {
     width: 100%;
+    margin-bottom: 40px;
   }
 
   .nav-menu {
@@ -26,8 +27,9 @@
   .logo {
     display: flex;
     gap: 15px;
-    /* padding: 14px; */
     padding-inline-end: 6rem;
+    margin-top: 37px;
+    padding-inline-start: 30px;
     .logo-title {
       color: #e6e9ec;
 
@@ -35,23 +37,33 @@
         color: #f7931a;
       }
     }
+    .coin-container {
+      // display: flex;
+      margin-inline-start: -13px;
+    }
+    svg {
+      margin-bottom: 23px;
+      margin-inline-end: -2px;
+    }
   }
+
   nav {
     display: flex;
     font-size: 16px;
     color: #fff;
     font-weight: 700;
-    font-family: "Poppins";
+    // font-family: "Poppins";
     text-transform: capitalize;
     padding: 34px 0 0px 25px;
     transition: 0.5s;
     margin-right: -21px;
     gap: 65px;
+    letter-spacing: 2px;
     a:not(:last-child) {
       margin-right: 10px;
     }
     a:hover {
-      color: #f7931a;
+      color: #b77127;
       transform: scale(1);
     }
   }

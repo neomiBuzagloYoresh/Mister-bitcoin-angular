@@ -17,6 +17,7 @@ body {
   margin: 0;
   max-height: 100vw;
   max-width: 100vw;
+  font-family: Raleway-Italic;
   // background-color: #10101076;
 }
 
@@ -43,3 +44,16 @@ a {
 //   flex-direction: column;
 //   gap: 20px;
 // }
+
+@font-face {
+  font-family: "Cereal-Bold";
+  src: url("./assets/fonts/Raleway-BlackItalic.ttf");
+}
+@font-face {
+  font-family: "Raleway-Italic";
+  src: url("./assets/fonts/Raleway-Italic.ttf");
+}
+@font-face {
+  font-family: "Raleway-Light";
+  src: url("./assets/fonts/Raleway-ExtraLightItalic.ttf");
+}
